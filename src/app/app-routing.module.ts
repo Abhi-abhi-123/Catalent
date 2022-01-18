@@ -18,6 +18,14 @@ const routes: Routes = [
   {
     path:'welcome',
     loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
+  },
+  {
+    path: 'po-approval',
+    loadChildren: () => import('./po-approval/po-approval.module').then( m => m.PoApprovalPageModule)
+  },
+  {
+    path: 'wo-order',
+    loadChildren: () => import('./wo-order/wo-order.module').then( m => m.WoOrderPageModule)
   }
 ];
 
