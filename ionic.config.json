@@ -1,0 +1,7 @@
+{
+  "name": "Catalent",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

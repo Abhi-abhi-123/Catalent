@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Catalent",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
