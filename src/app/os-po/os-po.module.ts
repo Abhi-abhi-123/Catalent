@@ -4,19 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PoApprovalPageRoutingModule } from './po-approval-routing.module';
+import { OsPoPageRoutingModule } from './os-po-routing.module';
 
-import { PoApprovalPage } from './po-approval.page';
-
-
+import { OsPoPage } from './os-po.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PoApprovalPageRoutingModule,
+    OsPoPageRoutingModule
   ],
-  declarations: [PoApprovalPage]
+  declarations: [OsPoPage]
 })
-export class PoApprovalPageModule {}
+export class OsPoPageModule {}

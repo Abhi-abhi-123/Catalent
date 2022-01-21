@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="danger"></ion-back-button>
+    </ion-buttons>
+    <ion-title>OS-Service Orders</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+<ion-card *ngFor="let item of orders"  class="ion-card-content" >
+  <div *ngIf="item.documentOrderTypeCode=='OS'">  
+  <!-- <ion-card-header  > -->
+    <!-- <ion-card-title> -->
+      <ion-grid>
+        <ion-item color="primary">
+        <ion-row>
+          
+          <ion-col >
+           {{item.entityNameShipTo}}
+          </ion-col>
+          <ion-col class="ion-text-end" >
+             {{item.documentOrderTypeCode}}-{{item.documentOrderInvoiceNumber}}
+          </ion-col>
+        </ion-row>
+      </ion-item>
+      
+    <!-- </ion-card-title> -->
+  <!-- </ion-card-header> -->
+
+
+  <!-- <ion-card-content> -->
+    <!-- <ion-card-title> -->
+      
+        <ion-row>
+          <ion-col>
+            <ion-icon name="person-circle"> </ion-icon>{{item.entityNameOriginator}}
+          </ion-col>
+          <ion-col class="ion-text-end">
+            <ion-icon name="cash"> </ion-icon>
+           {{item.currencyCodeForeign}} {{item.currencyCodeForeignDecimals}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-icon name="time"></ion-icon>
+            9 OCT 2020
+          </ion-col>
+          <ion-col class="ion-text-end">
+            <ion-icon name="hourglass"></ion-icon>6 days old
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    <!-- </ion-card-title> -->
+  <!-- </ion-card-content> -->
+      <!-- </ion-card-header> -->
+  <ion-footer>
+    <!-- <ion-card-title> -->
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <ion-icon name="call"></ion-icon>
+        </ion-col>
+        <ion-col class="ion-text-center">
+          <ion-icon name="chatbox"></ion-icon>
+        </ion-col>
+      </ion-row>
+    <!-- </ion-card-title> -->
+  </ion-footer>
+</div>
+</ion-card>
+</ion-content>
+

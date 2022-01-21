@@ -1,3 +1,4 @@
+
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -9,5 +10,15 @@
 
 
 <ion-content>
-  <h1>Work Orders page</h1>
+  <ion-card *ngFor="let work of workOrders">
+    <ion-grid>
+      <ion-card-title color="tertiary">
+        <ion-icon name="filter-circle"></ion-icon>{{work.orderDescription}}
+      </ion-card-title>
+      <ion-card-content>
+        <ion-row> {{work.costCenter}} | "{{work.typeWo}}"</ion-row>
+       <ion-row><ion-icon name="navigate-outline"> </ion-icon> {{work.statusDescription}} </ion-row>
+      </ion-card-content>
+    </ion-grid>
+  </ion-card>
 </ion-content>

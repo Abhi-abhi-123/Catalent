@@ -1,0 +1,179 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="danger"></ion-back-button>
+    </ion-buttons>
+    <ion-title> Order Details </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-card-content>MADISON VENSOR CAM</ion-card-content>
+      <ion-card-subtitle>OP-26285</ion-card-subtitle>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button color="success">Accept</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button color="danger">Decline</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-toolbar>
+    <ion-segment (ionChange)="segmentChanged($event)" value="order" color="secondary">
+      <ion-segment-button value="order">
+        <ion-label>Order</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="details">
+        <ion-label>Details</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="notes">
+        <ion-label>Notes</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <ion-card *ngIf="selectedSegment=='order'">
+    <ion-grid>
+      <ion-item>
+        <ion-label>
+          Originator
+        </ion-label>
+        <ion-label>
+          NIKHIL CHABRAA
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          Total Amount
+        </ion-label>
+        <ion-label>
+          USD 7,000.00
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Branch Plant
+        </ion-label>
+        <ion-label>
+          12701
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          Requested Date
+        </ion-label>
+        <ion-label>
+          12701
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          Transaction Date
+        </ion-label>
+        <ion-label>
+          12701
+        </ion-label>
+      </ion-item>
+    </ion-grid>
+  </ion-card>
+
+  <ion-content *ngIf="selectedSegment=='details'">
+  <ion-card>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            Item Desc.
+          </ion-col>
+          <ion-col>
+            Qty. Ordered
+          </ion-col>
+          <ion-col>
+            Unit COst (USD)
+          </ion-col>
+          <ion-col>
+            Total Cost(USD)
+          </ion-col>
+          <ion-col>
+            Rem.
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            Filter,Ass,Tubing,PES,0.1um
+          </ion-col>
+          <ion-col>
+            200
+          </ion-col>
+          <ion-col>
+            35
+          </ion-col>
+          <ion-col>
+            7000
+          </ion-col>
+          <ion-col>
+            <ion-icon name="pencil"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-item>
+            Total Amount: 4000
+          </ion-item>
+        </ion-row>
+      </ion-grid>
+  </ion-card>
+  </ion-content>
+
+  <ion-content *ngIf="selectedSegment=='notes'">
+    <ion-item class="ion-text-end">
+      <ion-icon name="add-circle-sharp"></ion-icon>
+    </ion-item>
+    <ion-card>
+      <ion-grid>
+        <ion-row color="secondary">
+          <ion-col>
+            Type
+          </ion-col>
+          <ion-col>
+            Item Name
+          </ion-col>
+          <ion-col>
+            Date
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            Type1
+          </ion-col>
+          <ion-col>
+            Item Name 1
+          </ion-col>
+          <ion-col>
+            Date 1
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            Type 2
+          </ion-col>
+          <ion-col>
+            Item Name 3
+          </ion-col>
+          <ion-col>
+            Date 2
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ion-content>
+</ion-content>

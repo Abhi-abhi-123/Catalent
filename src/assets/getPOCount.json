@@ -1,0 +1,59 @@
+{
+    "Body" : {
+    "getPurchaseOrdersCountsResponse" : {
+    "e1MessageList" : null,
+    
+    "purchaseOrdersCountList" : [
+        {
+        "approvalsHoldCode" : "A1",
+        "approvedStatus" : "280",
+        "awaitingApprovalStatus" : "230",
+        "budgetCompare" : " ",
+        "budgetHoldCode" : " ",
+        "description" : "Inventory Orders - OP",
+        "heldOrders" : "ENT002",
+        "openOrderInquiry" : "ENT014",
+        "orderEntry" : "ENT001",
+        "orderType" : "OP",
+        "protectAddressBookNum" : " ",
+        "recordCount" : 7,
+        "rejectedStatus" : "225",
+        "version" : "ENT805"
+    },
+        {
+        "approvalsHoldCode" : "A3",
+        "approvedStatus" : "280",
+        "awaitingApprovalStatus" : "230",
+        "budgetCompare" : " ",
+        "budgetHoldCode" : " ",
+        "description" : "Non Service Orders Orders- OC",
+        "heldOrders" : "ENT002",
+        "openOrderInquiry" : "ENT014",
+        "orderEntry" : "ENT001",
+        "orderType" : "OC",
+        "protectAddressBookNum" : " ",
+        "recordCount" : 1,
+        "rejectedStatus" : "225",
+        "version" : "ENT805"
+        },
+        {
+            "approvalsHoldCode" : "A2",
+            "approvedStatus" : "280",
+            "awaitingApprovalStatus" : "230",
+            "budgetCompare" : " ",
+            "budgetHoldCode" : " ",
+            "description" : "Service Orders- OS",
+            "heldOrders" : "ENT002",
+            "openOrderInquiry" : "ENT014",
+            "orderEntry" : "ENT001",
+            "orderType" : "OS",
+            "protectAddressBookNum" : " ",
+            "recordCount" : 2,
+            "rejectedStatus" : "225",
+            "version" : "ENT805"
+            } ]
+    }
+    }
+    }
+    
+    

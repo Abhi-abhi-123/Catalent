@@ -1,4 +1,6 @@
- <ion-header>
+
+<!-- <h1 *ngFor="let item of poCount" >In Po-approval Page {{item.recordCount}}</h1> -->
+<ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/welcome" color="danger"></ion-back-button>
@@ -8,5 +10,29 @@
 </ion-header>
 
 <ion-content>
-<h1>Purchase Orders</h1>
+  <!-- <h1>Purchase Orders</h1> -->
+  <ion-card *ngFor="let item of poCount" >
+    <ion-item >
+      <ion-icon name="save" slot="start"></ion-icon>
+      <!-- <ion-label>Inventory Orders - OP </ion-label> -->
+      <ion-card-subtitle   (click)='gotoOrderList(item.orderType)'>{{item.description}}</ion-card-subtitle>
+      <ion-badge color="primary" slot="end">{{item.recordCount}}</ion-badge> 
+    </ion-item>
+  </ion-card>
+
+  <!-- <ion-card>
+    <ion-item href="#">
+      <ion-icon name="wifi" slot="start"></ion-icon>
+      <ion-card-subtitle>Non Service Orders - OC </ion-card-subtitle>
+      <ion-badge color="primary" slot="end">13</ion-badge>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item href="#">
+      <ion-icon name="wine" slot="start"></ion-icon>
+      <ion-card-subtitle>Service Orders - OS</ion-card-subtitle>
+      <ion-badge color="primary" slot="end">14</ion-badge>
+    </ion-item>
+  </ion-card> -->
 </ion-content>
