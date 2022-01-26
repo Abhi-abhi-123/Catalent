@@ -1,0 +1,250 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="danger"></ion-back-button>
+    </ion-buttons>
+    <ion-title> Work Order Details </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        <ion-card-content> CAM APP</ion-card-content>
+      </ion-card-title>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-icon name="navigate-circle-outline"></ion-icon>
+            3171470 | "1"
+          </ion-col>
+          <ion-col>
+            <ion-icon name="calendar-clear-outline"></ion-icon>
+            8 OCT 2020
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+<ion-toolbar>
+  <ion-segment (ionChange)="segmentChanged($event)" value="details" color="secondary">
+    <ion-segment-button value="details">
+      <ion-label>Details</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="partlist">
+      <ion-label>Part List</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="laborlist">
+      <ion-label>Labor List</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="notes">
+      <ion-label>Notes</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+  <ion-card *ngIf="selectedWorkOrder=='details'">
+    <ion-grid>
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            Equipment :
+          </ion-row>
+          <ion-row>
+            MTS DF GT VGSDGG
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            Status :
+          </ion-row>
+          <ion-row>
+            <ion-input type="text" placeholder="status"></ion-input>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            Actual Hours:
+          </ion-row>
+          <ion-row>
+            <ion-input type="number" placeholder="Actual Hours"></ion-input>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            Crew :
+          </ion-row>
+          <ion-row>
+            PESALA ,ANAND
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            Assigned To :
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-input type="text" placeholder="Assigned to"></ion-input>
+            </ion-col>
+            <!-- <ion-col>
+              Notify
+            </ion-col> -->
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            Priority:
+          </ion-row>
+          <ion-row>
+            Priority 2
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-grid>
+  </ion-card>
+
+
+  <ion-content *ngIf="selectedWorkOrder=='partlist'">
+    <ion-card>
+      <ion-grid>
+        <ion-item>
+          <ion-row>
+            <ion-col size="3">
+              Item Number
+            </ion-col>
+            <ion-col size="3">
+              Estimation
+            </ion-col>
+            <ion-col size="3">
+              Actuals
+            </ion-col>
+            <ion-col size="3">
+              Issue Part.
+            </ion-col>
+          </ion-row>
+        </ion-item>
+
+        <ion-item>
+          <ion-row>
+            <ion-col size="3">
+              V10000000105
+            </ion-col>
+            <ion-col size="3">
+              2
+            </ion-col>
+            <ion-col size="3">
+              2.00
+            </ion-col>
+            <ion-col size="3">
+              <ion-icon name="pencil"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-item>
+      </ion-grid>
+    </ion-card>
+  </ion-content>
+
+
+
+  <ion-content *ngIf="selectedWorkOrder=='laborlist'">
+    <ion-card>
+      <ion-grid>
+        <ion-item>
+          <ion-row>
+            <ion-col size="3">
+              Employee Number
+            </ion-col>
+            <ion-col size="3">
+              Employee Name
+            </ion-col>
+            <ion-col size="3">
+              Shift
+            </ion-col>
+            <ion-col size="3">
+              Hours Worked
+            </ion-col>
+          </ion-row>
+        </ion-item>
+
+        <ion-item>
+          <ion-row>
+            <ion-col size="3">
+              700002028
+            </ion-col>
+            <ion-col size="3">
+              TEST-0028
+            </ion-col>
+            <ion-col size="3">
+              LK-1
+            </ion-col>
+            <ion-col size="3">
+              5
+              <ion-icon name="pencil"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-item>
+      </ion-grid>
+    </ion-card>
+  </ion-content>
+
+  <ion-content *ngIf="selectedWorkOrder=='notes'">
+    <ion-item class="ion-text-end">
+      <ion-icon name="add-circle-sharp"></ion-icon>
+    </ion-item>
+    <ion-card>
+      <ion-grid>
+        <ion-row color="secondary">
+          <ion-col>
+            Type
+          </ion-col>
+          <ion-col>
+            Item Name
+          </ion-col>
+          <ion-col>
+            Date
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            Type1
+          </ion-col>
+          <ion-col>
+            Item Name 1
+          </ion-col>
+          <ion-col>
+            Date 1
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            Type 2
+          </ion-col>
+          <ion-col>
+            Item Name 3
+          </ion-col>
+          <ion-col>
+            Date 2
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ion-content>
+
+</ion-content>

@@ -10,7 +10,7 @@
 
 
 <ion-content>
-  <ion-card *ngFor="let work of workOrders">
+  <ion-card *ngFor="let work of workOrders" (click)="goToWorkOrderDetails()">
     <ion-grid>
       <ion-card-title color="tertiary">
         <ion-icon name="filter-circle"></ion-icon>{{work.orderDescription}}

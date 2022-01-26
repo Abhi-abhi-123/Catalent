@@ -10,14 +10,15 @@
 <ion-content>
   <ion-card>
     <ion-card-content>
-      <ion-card-content>MADISON VENSOR CAM</ion-card-content>
-      <ion-card-subtitle>OP-26285</ion-card-subtitle>
+      <ion-card-content>{{poOrders.entityNameShipTo}}</ion-card-content>
+      <ion-card-subtitle>{{poOrders.documentOrderTypeCode}}-{{poOrders.documentOrderInvoiceNumber}}
+      </ion-card-subtitle>
       <ion-grid>
         <ion-row>
-          <ion-col>
+          <ion-col size="6">
             <ion-button color="success">Accept</ion-button>
           </ion-col>
-          <ion-col>
+          <ion-col size="6">
             <ion-button color="danger">Decline</ion-button>
           </ion-col>
         </ion-row>
@@ -42,28 +43,40 @@
   <ion-card *ngIf="selectedSegment=='order'">
     <ion-grid>
       <ion-item>
-        <ion-label>
-          Originator
-        </ion-label>
-        <ion-label>
-          NIKHIL CHABRAA
-        </ion-label>
+        <ion-row>
+          <ion-col size="6">
+            <ion-text>
+              Originator
+            </ion-text>
+          </ion-col>
+          <ion-col size="6">
+            <ion-text>
+              {{poOrders.entityNameOriginator}}
+            </ion-text>
+          </ion-col>
+        </ion-row>
       </ion-item>
 
       <ion-item>
-        <ion-label>
-          Total Amount
-        </ion-label>
-        <ion-label>
-          USD 7,000.00
-        </ion-label>
+        <ion-row>
+          <ion-col size="6">
+            <ion-text>
+              Total Amount
+            </ion-text>
+          </ion-col>
+          <ion-col size="6">
+            <ion-text>
+              {{poOrders.currencyCodeForeign}} {{poOrders.currencyCodeForeignDecimals}}
+            </ion-text>
+          </ion-col>
+        </ion-row>
       </ion-item>
       <ion-item>
         <ion-label>
           Branch Plant
         </ion-label>
         <ion-label>
-          12701
+          {{poOrders.documentCompanyKeyOrderNo}}
         </ion-label>
       </ion-item>
 
@@ -72,7 +85,7 @@
           Requested Date
         </ion-label>
         <ion-label>
-          12701
+          {{poOrders.dateRequested}}
         </ion-label>
       </ion-item>
 
@@ -81,47 +94,51 @@
           Transaction Date
         </ion-label>
         <ion-label>
-          12701
+          {{poOrders.dateTransaction}}
         </ion-label>
       </ion-item>
     </ion-grid>
   </ion-card>
 
   <ion-content *ngIf="selectedSegment=='details'">
-  <ion-card>
+    <ion-card>
       <ion-grid>
         <ion-row>
-          <ion-col>
+          <ion-col size="3">
             Item Desc.
           </ion-col>
-          <ion-col>
+          <ion-col size="2">
             Qty. Ordered
           </ion-col>
-          <ion-col>
+          <ion-col size="2">
             Unit COst (USD)
           </ion-col>
-          <ion-col>
+          <ion-col size="3">
             Total Cost(USD)
           </ion-col>
-          <ion-col>
+          <ion-col size="2">
             Rem.
           </ion-col>
         </ion-row>
 
-        <ion-row>
-          <ion-col>
-            Filter,Ass,Tubing,PES,0.1um
+        <ion-row *ngFor="let item of poDetails">
+          <ion-col size="3">
+            {{item.descriptionLine1}}
+            <!-- Filter,Ass,Tubing,PES,0.1um -->
           </ion-col>
-          <ion-col>
-            200
+          <ion-col size="2">
+            {{item.unitsTransactionQty}}
+            <!-- 200 -->
           </ion-col>
-          <ion-col>
-            35
+          <ion-col size="2">
+            {{item.purchasingUnitPrice}}
+            <!-- 35 -->
           </ion-col>
-          <ion-col>
-            7000
+          <ion-col size="3">
+            {{item.unitsTransactionQty*item.purchasingUnitPrice}}
+            <!-- 7000 -->
           </ion-col>
-          <ion-col>
+          <ion-col size="2">
             <ion-icon name="pencil"></ion-icon>
           </ion-col>
         </ion-row>
@@ -131,12 +148,12 @@
           </ion-item>
         </ion-row>
       </ion-grid>
-  </ion-card>
+    </ion-card>
   </ion-content>
 
   <ion-content *ngIf="selectedSegment=='notes'">
     <ion-item class="ion-text-end">
-      <ion-icon name="add-circle-sharp"></ion-icon>
+      <ion-icon name="add-circle-sharp"   (click)="openNotesPopOver($event)" ></ion-icon>
     </ion-item>
     <ion-card>
       <ion-grid>
@@ -162,7 +179,7 @@
             Date 1
           </ion-col>
         </ion-row>
-        <ion-row>
+        <!-- <ion-row>
           <ion-col>
             Type 2
           </ion-col>
@@ -172,8 +189,9 @@
           <ion-col>
             Date 2
           </ion-col>
-        </ion-row>
+        </ion-row> -->
       </ion-grid>
+
     </ion-card>
   </ion-content>
 </ion-content>

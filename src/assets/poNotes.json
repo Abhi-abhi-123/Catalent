@@ -1,0 +1,20 @@
+{
+    "Body": {
+        "getListOfPOMODetailsResponse": {
+            "moItems": [
+                {
+                    "moSeqNo": 1,
+                    "szData": "VGVzdA==",
+                    "szItemName": "Text1",
+                    "szMoType": "TEXT"
+                },
+                     {
+                    "moSeqNo": 2,
+                    "szItemName": "Testimg.jpg",
+                    "szMoType": "FILE"
+                }
+            ],
+            "orderNumber": 26071
+        }
+    }
+}

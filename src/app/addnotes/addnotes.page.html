@@ -1,0 +1,34 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>addnotes</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Note Type</ion-label>
+    <ion-select placeholder="Select One">
+      <ion-select-option value="text">TEXT</ion-select-option>
+      <ion-select-option value="image">IMAGE</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Item name</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button color="primary">Add</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button (click)="closepopover()">Cancel</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-footer>

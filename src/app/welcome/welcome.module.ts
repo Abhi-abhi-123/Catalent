@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { WelcomePageRoutingModule } from './welcome-routing.module';
 
 import { WelcomePage } from './welcome.page';
-
+import {  RouteReuseStrategy } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -15,7 +15,7 @@ import { WelcomePage } from './welcome.page';
     FormsModule,
     IonicModule,
     WelcomePageRoutingModule
-  ],
+  ],providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   declarations: [WelcomePage]
 })
 

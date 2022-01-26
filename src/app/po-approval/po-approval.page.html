@@ -15,7 +15,8 @@
     <ion-item >
       <ion-icon name="save" slot="start"></ion-icon>
       <!-- <ion-label>Inventory Orders - OP </ion-label> -->
-      <ion-card-subtitle   (click)='gotoOrderList(item.orderType)'>{{item.description}}</ion-card-subtitle>
+      <!-- <ion-card-subtitle   (click)='gotoOrderList(item.orderType)'   >{{item.description}}</ion-card-subtitle> -->
+     <ion-card-subtitle (click)='gotoOrderList()'  >{{item.description}}</ion-card-subtitle>
       <ion-badge color="primary" slot="end">{{item.recordCount}}</ion-badge> 
     </ion-item>
   </ion-card>

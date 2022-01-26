@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-wo-order',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WoOrderPage implements OnInit {
   workOrders:any;
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
     this.getWorkOrder();
@@ -19,5 +20,12 @@ export class WoOrderPage implements OnInit {
        console.log(this.workOrders);
   });
   }
+
+  goToWorkOrderDetails(){
+      console.log("In Work Order Dtails");
+
+      this.navCtrl.navigateForward("work-order-details");
+      
+    }
 
 }

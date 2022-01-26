@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
@@ -6,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.page.scss'],
 })
 export class WelcomePage implements OnInit {
-
-  constructor() { }
+  //public url="";
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
-
   
-
+  goToWoOrder(){
+    this.router.navigateByUrl('wo-order');
+  }
+  goToPoApproval(){
+    this.router.navigateByUrl('po-approval');
+  }
 }

@@ -1,0 +1,87 @@
+{
+    "Body": {
+        "getPurchaseOrderDetailForApproverResponse": {
+            "e1MessageList": null,
+            "purchaseOrderDetailForApproverResults": [
+                {
+                    "acctNumber": null,
+                    "amountExtendedPrice": 100.00,
+                    "amountForeignExtendPrice": 0,
+                    "assetIDNumber": null,
+                    "businessUnitCode": "12701",
+                    "companyKeyOrderNo": "00127",
+                    "companyKeyRelated": " ",
+                    "currencyCodeForeign": "USD",
+                    "dateRequested": "2020-08-13T00:00:00-05:00",
+                    "dateTransaction": "2020-08-13T00:00:00-05:00",
+                    "descriptionLine1": "Medium, Plate,TSA w/Lec&Polyso",
+                    "discountFactor": 0.0000,
+                    "documentLineNumber": 1.000,
+                    "documentOrderInvoiceNumber": 26056,
+                    "documentOrderTypeCode": "OP",
+                    "documentSuffix": "000",
+                    "foreignPurchasingPrice": 0.0000,
+                    "identifier2ndItem": "127-02001146",
+                    "identifierShortItem": 121640,
+                    "lineTypeCode": "S",
+                    "orderTypeCodeRelated": " ",
+                    "poSoLineNoRelated": 0.000,
+                    "poSoNumberRelated": " ",
+                    "purchasingUnitPrice": 10.0000,
+                    "shipTo": {
+                        "entityId": 12701
+                    },
+                    "statusCodeNextCode": "230",
+                    "statusLastCode": "230",
+                    "subledger": null,
+                    "subledgerTypeCode": null,
+                    "supplier": {
+                        "entityId": 308569
+                    },
+                    "unitOfMeasureCode": "CA",
+                    "unitOfMeasurePurchasing": "CA",
+                    "unitsTransactionQty": 10.000000
+                },
+                {
+                    "acctNumber": null,
+                    "amountExtendedPrice": 1000.00,
+                    "amountForeignExtendPrice": 0,
+                    "assetIDNumber": null,
+                    "businessUnitCode": "12701",
+                    "companyKeyOrderNo": "00127",
+                    "companyKeyRelated": " ",
+                    "currencyCodeForeign": "USD",
+                    "dateRequested": "2020-08-13T00:00:00-05:00",
+                    "dateTransaction": "2020-08-13T00:00:00-05:00",
+                    "descriptionLine1": "Medium, Plate,TSA w/Lec&Polyso",
+                    "discountFactor": 0.0000,
+                    "documentLineNumber": 2.000,
+                    "documentOrderInvoiceNumber": 26056,
+                    "documentOrderTypeCode": "OP",
+                    "documentSuffix": "000",
+                    "foreignPurchasingPrice": 0.0000,
+                    "identifier2ndItem": "127-02001146",
+                    "identifierShortItem": 121640,
+                    "lineTypeCode": "S",
+                    "orderTypeCodeRelated": " ",
+                    "poSoLineNoRelated": 0.000,
+                    "poSoNumberRelated": " ",
+                    "purchasingUnitPrice": 10.0000,
+                    "shipTo": {
+                        "entityId": 12701
+                    },
+                    "statusCodeNextCode": "230",
+                    "statusLastCode": "230",
+                    "subledger": null,
+                    "subledgerTypeCode": null,
+                    "supplier": {
+                        "entityId": 308569
+                    },
+                    "unitOfMeasureCode": "CA",
+                    "unitOfMeasurePurchasing": "CA",
+                    "unitsTransactionQty": 100.000000
+                }
+            ]
+        }
+    }
+}

@@ -17,15 +17,22 @@ export class PoApprovalPage implements OnInit {
     this.getPOCount();
   }
 
+ 
+
+
   getPOCount(){
     fetch("../../assets/getPOCount.json").then(res=>res.json()).then(json=>{
       this.poCount=json.Body.getPurchaseOrdersCountsResponse.purchaseOrdersCountList;
        console.log(this.poCount);
   });
+}
   
-  }
-  gotoOrderList(param:string){
-    console.log("param"+param);
-    this.navctrl.navigateForward(param);
+  // gotoOrderList(ordertype:string){
+  //   console.log("param"+ordertype);
+  //   this.navctrl.navigateForward("po-approval/"+ordertype);
+  // }
+
+  gotoOrderList(){
+    this.navctrl.navigateForward("OP");
   }
 }

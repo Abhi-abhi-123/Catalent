@@ -1,4 +1,3 @@
-
 <ion-header>
   <ion-toolbar>
     <ion-title>welcome page</ion-title>
@@ -7,23 +6,22 @@
 
 <ion-content style="text-align:center ">
   <ion-item>Welcome Here</ion-item>
-  <ion-grid >
+  <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-card  padding color="primary"  href="/po-approval">
-         
-           <ion-icon name="walk" class="wel-icon"></ion-icon>
-           <ion-card-content>PO Approval</ion-card-content>
-        
+        <!-- <ion-card padding color="primary" href="/po-approval"> -->
+          <ion-card color="primary" (click)="goToPoApproval()" >
+          <ion-icon name="walk" class="wel-icon"></ion-icon>
+          <ion-card-content>PO Approval</ion-card-content>
         </ion-card>
       </ion-col>
 
       <ion-col>
-        <ion-card  padding color="primary" href="/wo-order" >
-          
-           <ion-icon  name="bag-check-sharp" class="wel-icon"></ion-icon>
-           <ion-card-content>Manage my Work Order</ion-card-content>
-
+        <!-- <ion-card  padding color="primary" href="/wo-order" >
+           -->
+        <ion-card color="primary" (click)="goToWoOrder()" >
+          <ion-icon name="bag-check-sharp" class="wel-icon"></ion-icon>
+          <ion-card-content>Manage my Work Order</ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
